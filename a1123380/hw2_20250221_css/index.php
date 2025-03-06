@@ -6,19 +6,19 @@
     <title>迎新活動</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex;/*  Flexbox 控制內容排列 */
+            justify-content: center;/* 內容水平置中 */
+            align-items: center;/* 內容垂直置中 */
             height: 100vh;
-            margin: 0;
-            text-align: center;
+            margin: 0;/* 外邊距 */
+            text-align: center;/* 文字置中 */
             font-family: Arial, sans-serif;
             background: #fff8e1;
             color: #4a3d2f;
         }
         .container {
             max-width: 600px;
-            padding: 20px;
+            padding: 20px;/* 內邊距 */
         }
         img {
             width: 100%;
@@ -31,7 +31,7 @@
             padding: 10px 20px;
             background: #f6be11;
             color: #4a3d2f;
-            text-decoration: none;
+            text-decoration: none; /* 移除超連結底線 */
             border-radius: 5px;
             font-weight: bold;
         }

@@ -13,11 +13,11 @@
         }
         .container {
             max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
+            margin: 50px auto; /* 間距，左右自動置中 */
+            padding: 20px; /* 內邊距 */
             background: #fff5d7;
             border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);/* 增加陰影效果 */
         }
         h2 {
             margin-bottom: 20px;
@@ -25,13 +25,15 @@
         .schedule-table {
             width: 100%;
             margin: 20px 0;
-            border-collapse: collapse;
+            border-collapse: collapse;/* 合併表格邊框 */
         }
         .schedule-table th, .schedule-table td {
             padding: 10px;
-            text-align: center;
+            text-align: center;/* 內容置中 */
         }
         .schedule-table th {
+            padding: 10px;
+            text-align: center;
             background-color: #d9a60c;
             color: white;
         }
@@ -39,7 +41,7 @@
             background-color: #f6e7b5;
         }
         .form-group {
-            display: flex;
+            display: flex; /* 使用 Flexbox 標籤與輸入框並排 */
             align-items: center;
             justify-content: center;
             width: 100%;
@@ -61,9 +63,6 @@
             font-size: 16px;
             outline: none;
         }
-        input::placeholder, textarea::placeholder {
-            color: #a28c6a;
-        }
         textarea {
             resize: none;
             height: 100px;
@@ -78,13 +77,14 @@
             color: #4a3d2f;
             font-size: 16px;
             font-weight: bold;
-            cursor: pointer;
-            margin: 5px;
+            cursor: pointer; /* 滑鼠移上去變成手指 */
+            margin: 5px; /* 按鈕之間間距 */
             border-radius: 5px;
         }
         .back-btn {
             background-color: #a28c6a;
         }
+        /* 按鈕懸停效果 */
         .submit-btn:hover, .back-btn:hover {
             opacity: 0.8;
         }
@@ -95,34 +95,13 @@
     <div class="container">
         <h2>迎新活動行程</h2>
         <table class="schedule-table">
-            <tr>
-                <th>時間</th>
-                <th>活動內容</th>
-            </tr>
-            <tr>
-                <td>09:00 - 09:30</td>
-                <td>報到與入場</td>
-            </tr>
-            <tr>
-                <td>09:30 - 10:00</td>
-                <td>開場致詞</td>
-            </tr>
-            <tr>
-                <td>10:00 - 12:00</td>
-                <td>團隊遊戲時間</td>
-            </tr>
-            <tr>
-                <td>12:00 - 13:30</td>
-                <td>午餐時間</td>
-            </tr>
-            <tr>
-                <td>13:30 - 15:00</td>
-                <td>學長姐分享與問答</td>
-            </tr>
-            <tr>
-                <td>15:00 - 16:00</td>
-                <td>迎新活動結束與大合照</td>
-            </tr>
+            <tr><th>時間</th><th>活動內容</th></tr>
+            <tr><td>09:00 - 09:30</td><td>報到與入場</td></tr>
+            <tr><td>09:30 - 10:00</td><td>開場致詞</td></tr>
+            <tr><td>10:00 - 12:00</td><td>團隊遊戲時間</td></tr>
+            <tr><td>12:00 - 13:30</td><td>午餐時間</td></tr>
+            <tr><td>13:30 - 15:00</td><td>學長姐分享與問答</td></tr>
+            <tr><td>15:00 - 16:00</td><td>迎新活動結束與大合照</td></tr>
         </table>
 
         <h2>報名表單</h2>
