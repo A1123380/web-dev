@@ -41,14 +41,14 @@
             background-color: #f6e7b5;
         }
         .form-group {
-            display: flex; /* 使用 Flexbox 標籤與輸入框並排 */
+            display: flex; /* 使用 Flexbox 排列標籤和輸入框 */
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             width: 100%;
             margin-bottom: 15px;
         }
         label {
-            width: 90px;
+            width: 120px; /* 設定標籤固定寬度 */
             text-align: right;
             margin-right: 10px;
             font-weight: bold;
@@ -88,6 +88,15 @@
         .submit-btn:hover, .back-btn:hover {
             opacity: 0.8;
         }
+        /* 讓性別選項與標籤對齊 */
+        .gender-group {
+            display: flex;
+            align-items: center; /* 讓選項和標籤對齊 */
+            gap: 5px;
+        }
+        .gender-group input {
+            margin: 0px; /* 調整每個選項的右側間距 */
+        }
     </style>
 </head>
 <body>
@@ -105,23 +114,37 @@
         </table>
 
         <h2>報名表單</h2>
-        <form action="schedule.php" method="post">
+        <form action="info.php" method="post">
             <div class="form-group">
                 <label for="name">您的姓名:</label>
-                <input type="text" id="name" name="name" placeholder="請輸入姓名" required>
+                <input type="text" id="uName" name="uName" placeholder="請輸入姓名" required>
             </div>
             <div class="form-group">
                 <label for="email">電子郵件:</label>
-                <input type="email" id="email" name="email" placeholder="請輸入電子郵件" required>
+                <input type="email" id="uEmail" name="uEmail" placeholder="請輸入電子郵件" required>
             </div>
             <div class="form-group">
                 <label for="phone">聯絡電話:</label>
-                <input type="text" id="phone" name="phone" placeholder="請輸入電話號碼" required>
+                <input type="text" id="uPhone" name="uPhone" placeholder="請輸入電話號碼" required>
             </div>
+
+            <div class="form-group">
+                <label>性別:</label>
+                <div class="gender-group">
+                    <input type="radio" id="gender_male" name="gender" value="male" required>
+                    <label for="gender_male">男</label>
+                    <input type="radio" id="gender_female" name="gender" value="female">
+                    <label for="gender_female">女</label>
+                    <input type="radio" id="gender_other" name="gender" value="other">
+                    <label for="gender_other">其他</label>
+                </div>
+            </div>
+
             <div class="form-group">
                 <label for="suggestions">其他建議:</label>
                 <textarea id="suggestions" name="suggestions" placeholder="請留下您的建議或意見"></textarea>
             </div>
+
             <div class="btn-container">
                 <button type="submit" class="submit-btn">報名提交</button>
                 <a href="index.php"><button type="button" class="back-btn">回到首頁</button></a>
