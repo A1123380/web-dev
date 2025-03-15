@@ -1,6 +1,8 @@
 <?php
 session_start();
+?>
 
+<?php
 $defaultName = "user";
 $defaultPwd = "123456";
 $adminName = "admin";
@@ -12,18 +14,18 @@ $userPwd = $_POST["userPwd"];
 if ($defaultName == $userName && $defaultPwd == $userPwd) {
     echo "Login success";
     $_SESSION["check"] = 1;
-    setcookie("userName", $userName, time() + 10); // 10 seconds expiration
+    setcookie("userName", $userName, time() + 10); // 設置Cookie10秒過期
     header("Location: welcome_user.php");
     exit();
 } elseif ($userName == $adminName && $userPwd == $adminPwd) {
     echo "Login success, admin";
     $_SESSION["check"] = 2;
-    setcookie("userName", $userName, time() + 10); // 10 seconds expiration
+    setcookie("userName", $userName, time() + 10); // 設置Cookie10秒過期
     header("Location: welcome_admin.php");
     exit();
 } else {
-    echo "Login failed, will send you back to login again";
-    header("Refresh:3;url=login.php");
+    // 登入錯誤，回到 login.php 並傳遞錯誤訊息
+    header("Location: login.php?error=true");
     exit();
 }
 ?>

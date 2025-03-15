@@ -4,6 +4,12 @@ if (isset($_COOKIE["userName"])) {
 } else {
     echo "Welcome! Please log in.<br>";
 }
+
+// 顯示錯誤訊息
+$errorMessage = '';
+if (isset($_GET['error']) && $_GET['error'] == 'true') {
+    $errorMessage = "Login failed! Please check your username or password.";
+}
 ?>
 <!DOCTYPE html>
 <html lang="zh-TW">
@@ -52,11 +58,25 @@ if (isset($_COOKIE["userName"])) {
         input[type="submit"]:hover {
             opacity: 0.8;
         }
+        .error-message {
+            color: red;
+            font-weight: bold;
+            background-color: #ffcccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Login</h1>
+        
+        <!-- 顯示錯誤訊息 -->
+        <?php if ($errorMessage): ?>
+            <div class="error-message"><?= $errorMessage; ?></div>
+        <?php endif; ?>
+
         <form action="logincheck.php" method="post">
             <div class="form-group">
                 Please input your username: <input type="text" name="userName"><br>
