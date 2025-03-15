@@ -88,6 +88,20 @@
         .submit-btn:hover, .back-btn:hover {
             opacity: 0.8;
         }
+        
+        .gender-group {
+            display: flex;
+            align-items: center; /* 垂直對齊 */
+            gap: 2px; /* 更小的間距 */
+        }
+
+        .gender-group input {
+            margin: 0; /* 移除外邊距 */
+        }
+
+        .gender-group label {
+            margin-right: 6px; /* 控制標籤與下一個選項的間距 */
+        }   
         /* 讓性別選項與標籤對齊 */
         .gender-group {
             display: flex;
