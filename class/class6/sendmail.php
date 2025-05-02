@@ -31,8 +31,8 @@ try {
     $mail->charset    = 'utf-8';
 
     //Recipients
-    $mail->setFrom('monkey60404@gmail.com', 'Mailer');
-    $mail->addAddress('a1123380@mail.nuk.edu.tw', 'Joe User'); 
+    $mail->setFrom('', 'Mailer');
+    $mail->addAddress('', 'Joe User'); 
     $mail->addAddress($to);     //Add a recipient
 //    $mail->addAddress('ellen@example.com');               //Name is optional
 //    $mail->addReplyTo('info@example.com', 'Information');
