@@ -78,10 +78,10 @@ try {
     $mail->Port       = 465;
     $mail->CharSet    = 'UTF-8';
 
-    $mail->setFrom('monkey60404@gmail.com', '網站管理員');
+    $mail->setFrom('noreply@gmail.com', '網站管理員');
     $mail->addAddress($uEmail, $uName);
 
-    $subject = "會員註冊成功通知";
+    $subject = "恭喜註冊成功";
     $content = nl2br("親愛的 '$uName'，您好！<br><br>您已成功註冊本網站會員。<br>感謝您的加入！<br><br>此信件為系統自動發送，請勿回覆。");
 
     $mail->isHTML(true);
