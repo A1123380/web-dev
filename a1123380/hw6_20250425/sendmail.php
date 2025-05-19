@@ -72,13 +72,13 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'monkey60404@gmail.com';
+    $mail->Username   = 'example@mail.com';
     $mail->Password   = 'gahd frjf clff zxma';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
     $mail->CharSet    = 'UTF-8';
 
-    $mail->setFrom('monkey60404@gmail.com', '網站管理員');
+    $mail->setFrom('example@mail.com', '網站管理員');
     $mail->addAddress($uEmail, $uName);
 
     $subject = "會員註冊成功通知";
